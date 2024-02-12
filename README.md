@@ -7,23 +7,23 @@ By default, the endpoint is localhost:8000/
 
 The following are the APIs that I have created
 
-## api/register/
+## api/register
 * Pass username and password in the body to register user
 * Example curl command: `curl -X POST http://localhost:8000/api/register/ -d "username=testuser&password=testpassword"`
 
-## api/token/
+## api/token
 * Pass username and password to obtain token
 * Example curl command: `curl -X POST http://localhost:8000/api/token -d "username=testuser&password=testpassword"`
 
-## api/categories/
+## api/categories
 * Use token obtained for authorization. API returns a list of all categories. 
 * Example curl command: `curl -H "Authorization: Bearer <auth_token>" http://localhost:8000/api/categories/`
 
-## api/tags/
+## api/tags
 * Use token obtained for authorization. API returns a list of all tags. 
 * Example curl command: `curl -H "Authorization: Bearer <auth_token>" http://localhost:8000/api/tags/`
 
-## api/items/
+## api/items
 * Use token obtained for authorization. API returns a list of all items. Items can be filtered by passing the following query params: 'sku', 'name', 'category', 'tags', 'stock_status', 'available_stock' 
 * Example curl command: `curl -H "Authorization: Bearer <auth_token>" http://localhost:8000/api/items/`
 * You can filter items returned by passking 'sku', 'name', 'category', 'tags', 'stock_status', 'available_stock' as query params
